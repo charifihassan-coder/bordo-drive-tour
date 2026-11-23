@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bordo Drive Tour : chauffeur privé et excursions en van à Bordeaux</title>
+<meta name="description" content="L'un de nos chauffeurs vous conduit en van climatisé, jusqu'à sept passagers, de Bordeaux à Saint-Émilion, au bassin d'Arcachon ou à Saint-Sébastien. Réservation par téléphone, 24h/24.">
+<meta name="theme-color" content="#0A0A0C">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bordo Drive Tour">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Bordo Drive Tour : chauffeur privé et excursions en van à Bordeaux">
+<meta property="og:description" content="Saint-Émilion, bassin d'Arcachon, châteaux des deux rives, Saint-Sébastien : un van climatisé et son chauffeur, à la demi-journée ou à la journée.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Le village de Saint-Émilion et son clocher au-dessus des vignes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bordo Drive Tour : chauffeur privé à Bordeaux">
+<meta name="twitter:description" content="Un van climatisé et son chauffeur, de Bordeaux à Saint-Émilion, Arcachon ou Saint-Sébastien.">
+<meta name="twitter:image" content="og.jpg">
+<!-- À compléter avec le domaine définitif : <link rel="canonical" href="https://…/"> et des adresses absolues pour og:image -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" type="image/avif" imagesrcset="photos/opt/demo-01-place-de-la-bourse-640.avif 640w, photos/opt/demo-01-place-de-la-bourse-960.avif 960w, photos/opt/demo-01-place-de-la-bourse-1280.avif 1280w, photos/opt/demo-01-place-de-la-bourse-1920.avif 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  /* Avant le premier affichage : l'intro ne joue qu'une fois par session, jamais sous « mouvement réduit ». */
+  (function () {
+    var root = document.documentElement, seen = false;
+    root.classList.add('js');
+    try { seen = sessionStorage.getItem('bdt-intro') === '1'; } catch (e) {}
+    if (!seen && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('intro-on');
+    /* filet de sécurité : si le script principal ne démarre pas, le rideau se lève seul au bout de 6 s */
+    window.setTimeout(function () { if (!root.classList.contains('intro-open')) root.classList.add('intro-done'); }, 6000);
+  })();
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Bordo Drive Tour","slogan":"Votre transport, notre priorité","description":"Chauffeur privé et excursions en van au départ de Bordeaux.","telephone":"+33613155760","email":"bordodrivetour@gmail.com","priceRange":"280 € – 570 €","areaServed":"Bordeaux","openingHours":"Mo-Su 00:00-23:59"}</script>
+</head>
+<body>
+<a class="skip" href="#journee">Aller au contenu</a>
+
+<!-- INTRO : monogramme, nom dévoilé par masque, slogan ; le compteur suit le chargement réel (polices + photo d'ouverture) -->
+<div class="intro" id="intro">
+  <div class="intro__lockup" aria-hidden="true">
+    <p class="intro__mono"><span>B</span><span>D</span></p>
+    <p class="intro__brand">
+      <span class="intro__word" style="--w: 0"><span>Bordo</span></span>
+      <span class="intro__word" style="--w: 1"><span>Drive</span></span>
+      <span class="intro__word" style="--w: 2"><span>Tour</span></span>
+    </p>
+    <p class="intro__tag">Votre transport, notre priorité</p>
+  </div>
+  <div class="intro__meter" aria-hidden="true">
+    <span class="intro__bar"><i id="intro-bar"></i></span>
+    <span class="intro__count"><span id="intro-count">00</span><span class="intro__pct">%</span></span>
+  </div>
+  <button class="intro__skip" id="intro-skip" type="button">Passer l’intro</button>
+</div>
+
+<header class="nav nav--long" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Bordo Drive Tour, retour en haut de page">Bordo Drive Tour</a>
+  <nav class="nav__links" aria-label="Navigation principale">
+    <a href="#trajets">Trajets</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#van">Le véhicule</a>
+    <a href="#avis">Avis</a>
+    <a href="galerie/">Galerie</a>
+    <a href="reservation/">Réserver</a>
+  </nav>
+  <a class="nav__call" href="tel:+33613155760"><span class="nav__call-label">Appeler</span><span class="nav__call-number">06 13 15 57 60</span></a>
+</header>
+
+<main id="top">
+  <!-- OUVERTURE -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media" id="hero-media" style="--lq: url('data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAwCdASoYABAALsGAwGAjqysrCwDASxAE6ZQAMv7kPDO2qJVIAP38XOnf5zqYRRmFAvaiLq1VOjxasXagznUihFn/k444AAA=')">
+      <picture>
+          <source type="image/avif" srcset="photos/opt/demo-01-place-de-la-bourse-640.avif 640w, photos/opt/demo-01-place-de-la-bourse-960.avif 960w, photos/opt/demo-01-place-de-la-bourse-1280.avif 1280w, photos/opt/demo-01-place-de-la-bourse-1920.avif 1920w" sizes="100vw">
+          <source type="image/webp" srcset="photos/opt/demo-01-place-de-la-bourse-640.webp 640w, photos/opt/demo-01-place-de-la-bourse-960.webp 960w, photos/opt/demo-01-place-de-la-bourse-1280.webp 1280w, photos/opt/demo-01-place-de-la-bourse-1920.webp 1920w" sizes="100vw">
+          <img id="hero-img" src="photos/opt/demo-01-place-de-la-bourse-1280.webp" width="1920" height="1275" alt="La place de la Bourse à Bordeaux, ses façades de pierre blonde du XVIIIe siècle sous un ciel nuageux" fetchpriority="high" decoding="async">
+        </picture>
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="eyebrow" data-reveal style="--i: 1">Noté 5,0 sur 5 par 11 voyageurs sur Google</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line" data-reveal="mask" style="--i: 2"><span>Chauffeur privé</span></span>
+        <span class="line" data-reveal="mask" style="--i: 3"><span><em>à Bordeaux</em></span></span>
+      </h1>
+      <p class="hero__lead" data-reveal style="--i: 4">L’un de nos chauffeurs vous conduit en van climatisé, jusqu’à sept passagers, vers Saint-Émilion, Arcachon ou Saint-Sébastien. À la demi-journée ou à la journée, 24h/24.</p>
+      <div class="hero__actions" data-reveal style="--i: 5">
+        <a class="btn" href="reservation/"><span>Réserver une expérience sur mesure</span></a>
+        <a class="link-line" href="#trajets">Voir les trajets</a>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#journee" data-reveal style="--i: 6"><span>Découvrir</span><span class="hero__scroll-line" aria-hidden="true"></span></a>
+  </section>
+
+  <!-- LE SERVICE, en une phrase et quatre faits -->
+  <section class="manifesto" aria-label="Le service">
+    <p class="manifesto__text">Un van, un chauffeur, et la région à votre rythme&nbsp;: <em>Saint-Émilion</em>, les châteaux des deux rives, le bassin d’Arcachon, jusqu’à Saint-Sébastien.</p>
+    <dl class="manifesto__facts">
+      <div><dt>Départ</dt><dd>Bordeaux</dd></div>
+      <div><dt>À bord</dt><dd>Jusqu’à 7 passagers</dd></div>
+      <div><dt>Disponibilité</dt><dd>24h/24</dd></div>
+      <div><dt>Avis Google</dt><dd>5,0 sur 5</dd></div>
+    </dl>
+  </section>
+
+  <!-- UNE JOURNÉE À SAINT-ÉMILION -->
+  <section class="section journey" id="journee" aria-labelledby="journey-title" tabindex="-1">
+    <header class="section-head">
+      <p class="eyebrow">Une excursion type</p>
+      <h2 id="journey-title">Une journée à Saint-Émilion, <em>étape par étape</em></h2>
+      <p class="section-head__lead">Le déroulé d’une excursion, tel que l’ont décrit quatre voyageurs partis de Bordeaux en août.</p>
+    </header>
+    <ol class="steps">
+      <li class="step">
+        <figure class="media step__media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoYABAAPwForE6rJaQiMAgBYCAJQBOkCYhgP1VLD+SPw5fAAP7tgpjOUyXroNFLQrJ4OyyXG2dZOsoopcIK7xjTHdXNhbdjtG/qRziwQAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-04-rangs-de-vigne-automne-640.avif 640w, photos/opt/demo-04-rangs-de-vigne-automne-960.avif 960w, photos/opt/demo-04-rangs-de-vigne-automne-1280.avif 1280w, photos/opt/demo-04-rangs-de-vigne-automne-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <source type="image/webp" srcset="photos/opt/demo-04-rangs-de-vigne-automne-640.webp 640w, photos/opt/demo-04-rangs-de-vigne-automne-960.webp 960w, photos/opt/demo-04-rangs-de-vigne-automne-1280.webp 1280w, photos/opt/demo-04-rangs-de-vigne-automne-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <img src="photos/opt/demo-04-rangs-de-vigne-automne-1280.webp" width="1920" height="1280" alt="Des rangs de vigne aux couleurs d’automne dans le vignoble de Saint-Émilion" loading="lazy" decoding="async">
+        </picture></figure>
+        <div class="step__text" data-inview="text">
+          <p class="step__num">01</p>
+          <h3>La veille, votre chauffeur confirme</h3>
+          <p>Il confirme la réservation la veille du départ. Le jour même, le van arrive à l’heure.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="media step__media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoYABAAPwFurk+rJqQiMAgBYCAJYgC7MoMrZEmQxrs4udDONAD+7VZaBShpWhgCwlRzEoYvfAVMXO/e4wQDsnKU66gnbw8QAAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-14-vignes-et-propriete-640.avif 640w, photos/opt/demo-14-vignes-et-propriete-960.avif 960w, photos/opt/demo-14-vignes-et-propriete-1280.avif 1280w, photos/opt/demo-14-vignes-et-propriete-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <source type="image/webp" srcset="photos/opt/demo-14-vignes-et-propriete-640.webp 640w, photos/opt/demo-14-vignes-et-propriete-960.webp 960w, photos/opt/demo-14-vignes-et-propriete-1280.webp 1280w, photos/opt/demo-14-vignes-et-propriete-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <img src="photos/opt/demo-14-vignes-et-propriete-1280.webp" width="1920" height="1280" alt="Des vignes en feuilles devant une propriété viticole de Saint-Émilion" loading="lazy" decoding="async">
+        </picture></figure>
+        <div class="step__text" data-inview="text">
+          <p class="step__num">02</p>
+          <h3>Le château et la dégustation</h3>
+          <p>Votre chauffeur vous dépose au château pour la visite et la dégustation, puis vous attend. En route, il raconte l’histoire des lieux.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="media step__media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoYABAAPwFwrk+rJqQiMAgBYCAJYwC7ACFqt5OZDT96vQAA/ucgJePDTZtnqjxjUhLt8mMUV+zgHgOiLIec6n+bwfvW54qmd2yQAAAA')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-07-toits-de-saint-emilion-640.avif 640w, photos/opt/demo-07-toits-de-saint-emilion-960.avif 960w, photos/opt/demo-07-toits-de-saint-emilion-1280.avif 1280w, photos/opt/demo-07-toits-de-saint-emilion-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <source type="image/webp" srcset="photos/opt/demo-07-toits-de-saint-emilion-640.webp 640w, photos/opt/demo-07-toits-de-saint-emilion-960.webp 960w, photos/opt/demo-07-toits-de-saint-emilion-1280.webp 1280w, photos/opt/demo-07-toits-de-saint-emilion-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <img src="photos/opt/demo-07-toits-de-saint-emilion-1280.webp" width="1920" height="1280" alt="Les toits de tuiles et la tour médiévale de Saint-Émilion vus du haut du village, la plaine au loin" loading="lazy" decoding="async">
+        </picture></figure>
+        <div class="step__text" data-inview="text">
+          <p class="step__num">03</p>
+          <h3>Le village par le haut</h3>
+          <p>Dépose en haut de la colline, face à la vue. Vous descendez à pied jusqu’à la place du village.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="media step__media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoYABAAPwFwrk+rJqQiMAgBYCAJYgDCgCP/dwEsOa5oPFLRAAD+l8dS5cBU0Zasd4lpx2gjgxPPOXx7Dw/BFMu8UV40homIAAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-16-clocher-de-saint-emilion-640.avif 640w, photos/opt/demo-16-clocher-de-saint-emilion-960.avif 960w, photos/opt/demo-16-clocher-de-saint-emilion-1280.avif 1280w, photos/opt/demo-16-clocher-de-saint-emilion-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <source type="image/webp" srcset="photos/opt/demo-16-clocher-de-saint-emilion-640.webp 640w, photos/opt/demo-16-clocher-de-saint-emilion-960.webp 960w, photos/opt/demo-16-clocher-de-saint-emilion-1280.webp 1280w, photos/opt/demo-16-clocher-de-saint-emilion-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 56vw">
+          <img src="photos/opt/demo-16-clocher-de-saint-emilion-1280.webp" width="1920" height="1285" alt="Le village de Saint-Émilion et son clocher sur la colline, dominant les vignes sous un ciel d’orage" loading="lazy" decoding="async" style="object-position: 40% 38%">
+        </picture></figure>
+        <div class="step__text" data-inview="text">
+          <p class="step__num">04</p>
+          <h3>Le retour sur un SMS</h3>
+          <p>Vous envoyez votre position par SMS quand la visite est finie. Le van vient vous chercher.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- LES AUTRES TRAJETS -->
+  <section class="section trips" id="trajets" aria-labelledby="trips-title" tabindex="-1">
+    <header class="section-head">
+      <p class="eyebrow">Au départ de Bordeaux</p>
+      <h2 id="trips-title">Les autres <em>trajets</em></h2>
+      <p class="section-head__lead">À la demi-journée, à la journée ou en transfert. Nos chauffeurs font aussi visiter Bordeaux, y compris avec de jeunes enfants.</p>
+    </header>
+    <ul class="trips__grid">
+      <li class="trip">
+        <figure class="media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAwCdASoYABAAPwForE6rJaQiMAgBYCAJZQCo9CHWyIJKyrNe4AD+5yfBNMH9Fv778eDlponzfnuUdivtlARgJv6YzFD2HL1aAAAA')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-05-jetee-arcachon-640.avif 640w, photos/opt/demo-05-jetee-arcachon-960.avif 960w, photos/opt/demo-05-jetee-arcachon-1280.avif 1280w, photos/opt/demo-05-jetee-arcachon-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 31vw">
+          <source type="image/webp" srcset="photos/opt/demo-05-jetee-arcachon-640.webp 640w, photos/opt/demo-05-jetee-arcachon-960.webp 960w, photos/opt/demo-05-jetee-arcachon-1280.webp 1280w, photos/opt/demo-05-jetee-arcachon-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 31vw">
+          <img src="photos/opt/demo-05-jetee-arcachon-1280.webp" width="1920" height="1280" alt="La jetée d’Eyrac et le front de mer d’Arcachon vus depuis le Bassin" loading="lazy" decoding="async">
+        </picture></figure>
+        <div class="trip__meta"><h3>Bassin d’Arcachon</h3><span class="trip__tag">Demi-journée</span></div>
+        <p>La ville et son front de mer, seuls ou après Saint-Émilion dans la même journée.</p>
+      </li>
+      <li class="trip">
+        <figure class="media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBQCdASoYABwAPwFurVCrJiQiqA1RYCAJYgC1IUFXIAtGbRlFzjocSzdXut5cjyXNaAD+FHwQZaWXL8yPAXdmZuzkzSpQHcdv1H686rQWnRf7wj2pNeYRvvvV4KMJ7OSFOuP4vdaLkqZqertpVridi5ZNbQQq66nNWXtDYUJCrcWjQVbG4gAA')"><picture>
+          <source type="image/avif" srcset="photos/opt/van-06-devant-un-chateau-640.avif 640w, photos/opt/van-06-devant-un-chateau-960.avif 960w, photos/opt/van-06-devant-un-chateau-1280.avif 1280w, photos/opt/van-06-devant-un-chateau-1435.avif 1435w" sizes="(max-width: 899px) 100vw, 31vw">
+          <source type="image/webp" srcset="photos/opt/van-06-devant-un-chateau-640.webp 640w, photos/opt/van-06-devant-un-chateau-960.webp 960w, photos/opt/van-06-devant-un-chateau-1280.webp 1280w, photos/opt/van-06-devant-un-chateau-1435.webp 1435w" sizes="(max-width: 899px) 100vw, 31vw">
+          <img src="photos/opt/van-06-devant-un-chateau-1280.webp" width="1435" height="1701" alt="Un van noir Bordo Drive Tour stationné devant un château en pierre blonde, sous un ciel bleu" loading="lazy" decoding="async" style="object-position: 50% 78%">
+        </picture></figure>
+        <div class="trip__meta"><h3>Châteaux des deux rives</h3><span class="trip__tag">Demi-journée</span></div>
+        <p>Rive gauche ou rive droite&nbsp;: votre chauffeur conseille les châteaux à visiter et vous attend sur place.</p>
+      </li>
+      <li class="trip">
+        <figure class="media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYABAAPwFqrU6rJiQiMAgBYCAJaACdMoMYADu2ubGVOjLAAPcf4hR+AHoEw6bjxSQlutA8bsI+LEmcpiC09+NJJGkO7g8Q7ww4jsByrrC1SaIAAAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-15-baie-de-la-concha-640.avif 640w, photos/opt/demo-15-baie-de-la-concha-960.avif 960w, photos/opt/demo-15-baie-de-la-concha-1280.avif 1280w, photos/opt/demo-15-baie-de-la-concha-1920.avif 1920w" sizes="(max-width: 899px) 100vw, 31vw">
+          <source type="image/webp" srcset="photos/opt/demo-15-baie-de-la-concha-640.webp 640w, photos/opt/demo-15-baie-de-la-concha-960.webp 960w, photos/opt/demo-15-baie-de-la-concha-1280.webp 1280w, photos/opt/demo-15-baie-de-la-concha-1920.webp 1920w" sizes="(max-width: 899px) 100vw, 31vw">
+          <img src="photos/opt/demo-15-baie-de-la-concha-1280.webp" width="1920" height="1280" alt="La baie de la Concha à Saint-Sébastien vue des hauteurs, plage en arc et mont Urgull" loading="lazy" decoding="async">
+        </picture></figure>
+        <div class="trip__meta"><h3>Saint-Sébastien</h3><span class="trip__tag">Sur demande</span></div>
+        <p>De Bordeaux jusqu’en Espagne, avec des arrêts conseillés en route.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- TARIFS : écrits depuis data/reservation.json -->
+  <section class="section pricing" id="tarifs" aria-labelledby="pricing-title" tabindex="-1">
+    <header class="section-head">
+      <p class="eyebrow">Mise à disposition</p>
+      <h2 id="pricing-title">Le van et son chauffeur, <em>à votre disposition</em></h2>
+      <p class="section-head__lead">Un prix pour le véhicule entier, jusqu’à 7 passagers.</p>
+    </header>
+    <ul class="pricing__grid">
+        <li class="price" data-inview="text">
+          <p class="price__name">Demi-journée</p>
+          <p class="price__amount">280<small>€</small></p>
+          <p class="price__terms">4 heures · 80 km inclus</p>
+        </li>
+        <li class="price" data-inview="text">
+          <p class="price__name">Journée complète</p>
+          <p class="price__amount">570<small>€</small></p>
+          <p class="price__terms">8 heures · 160 km inclus</p>
+        </li>
+        <li class="price" data-inview="text">
+          <p class="price__name">Programme sur mesure</p>
+          <p class="price__amount price__amount--text">Sur devis</p>
+          <p class="price__terms">4 heures minimum</p>
+        </li>
+    </ul>
+    <div class="pricing__foot">
+      <p class="pricing__notes">Prix des visites non inclus. Circuits vers d’autres destinations sur demande.</p>
+      <a class="btn" href="reservation/"><span>Composer ma journée</span></a>
+    </div>
+  </section>
+
+  <!-- LE VÉHICULE : diaporama animé, fiche et service à bord -->
+  <section class="section vehicle" id="van" aria-labelledby="van-title" tabindex="-1">
+    <header class="section-head">
+      <p class="eyebrow">Le véhicule</p>
+      <h2 id="van-title">Mercedes-Benz Classe V, <em>extra-long</em></h2>
+      <p class="section-head__lead">Un van noir de 2023 en finition Avantgarde, pour sept passagers.</p>
+    </header>
+
+    <div class="vehicle__show">
+      <div class="showcase" id="showcase" role="group" aria-roledescription="diaporama" aria-label="Photos du véhicule">
+        <div class="showcase__stage" id="showcase-stage">
+          <figure class="showcase__slide is-active" data-label="Trois quarts avant" style="--lq: url('data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQBQCdASoYABIAPwFsr1GrJaQisBgIAWAgCWUAuwALe34BnAl86SGWin1JNIBmOe/IoQAAyw6j+YExZ+CgbAFZSBFy1p6p59uhJEXkzATAjg1ii37T1+N8O2y9yO/0aeNiypqAc5BbsWNbOUanthJsmdwAAA==')"><picture>
+          <source type="image/avif" srcset="photos/opt/van-01-trois-quarts-avant-640.avif 640w, photos/opt/van-01-trois-quarts-avant-800.avif 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <source type="image/webp" srcset="photos/opt/van-01-trois-quarts-avant-640.webp 640w, photos/opt/van-01-trois-quarts-avant-800.webp 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <img src="photos/opt/van-01-trois-quarts-avant-800.webp" width="800" height="600" alt="Le Mercedes-Benz Classe V noir de Bordo Drive Tour, vu de trois quarts avant" loading="lazy" decoding="async">
+        </picture></figure>
+          <figure class="showcase__slide" data-label="Profil gauche" style="--lq: url('data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoYABIAPwFqrU6rJiQmMAgBYCAJZwAAW9IQvSnyTkgTfc1zAAD+00cri81NY7dy212d1dNtxuMv54b6/3uWikT1oghnpQAA')"><picture>
+          <source type="image/avif" srcset="photos/opt/van-02-profil-gauche-640.avif 640w, photos/opt/van-02-profil-gauche-800.avif 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <source type="image/webp" srcset="photos/opt/van-02-profil-gauche-640.webp 640w, photos/opt/van-02-profil-gauche-800.webp 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <img src="photos/opt/van-02-profil-gauche-800.webp" width="800" height="600" alt="Le Mercedes-Benz Classe V noir de Bordo Drive Tour, vu de profil côté gauche, carrosserie extra-longue" loading="lazy" decoding="async">
+        </picture></figure>
+          <figure class="showcase__slide" data-label="Vue arrière" style="--lq: url('data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwBACdASoYABIAPwFwrU8rJqQiMAgBYCAJZQDAKCHVFwyxenQgytetVgKgpGEAAP6zrmmEoHj5FlqqNNpunHulmdbXFPDOibLcG9ckDLjrCpi8ZhfvIrvzwEXkcYAA')"><picture>
+          <source type="image/avif" srcset="photos/opt/van-03-arriere-640.avif 640w, photos/opt/van-03-arriere-800.avif 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <source type="image/webp" srcset="photos/opt/van-03-arriere-640.webp 640w, photos/opt/van-03-arriere-800.webp 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <img src="photos/opt/van-03-arriere-800.webp" width="800" height="600" alt="Le Mercedes-Benz Classe V noir de Bordo Drive Tour, vu de l’arrière, avec son monogramme V 300 d" loading="lazy" decoding="async">
+        </picture></figure>
+          <figure class="showcase__slide" data-label="Profil droit" style="--lq: url('data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoYABIAPwFqq06rJiOiMAgBYCAJZwDDrCHceHVolpVOzIv4AP5fpghUIwhUIjFAnqaoTTF/Pmmzoe1bdRWToOOaVARN2HZUp+y8IYlwAAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/van-04-profil-droit-640.avif 640w, photos/opt/van-04-profil-droit-800.avif 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <source type="image/webp" srcset="photos/opt/van-04-profil-droit-640.webp 640w, photos/opt/van-04-profil-droit-800.webp 800w" sizes="(max-width: 899px) 100vw, 62vw">
+          <img src="photos/opt/van-04-profil-droit-800.webp" width="800" height="600" alt="Le Mercedes-Benz Classe V noir de Bordo Drive Tour, vu de profil côté droit, portes latérales et vitres teintées" loading="lazy" decoding="async">
+        </picture></figure>
+          <figure class="showcase__slide" data-label="Face avant" style="--lq: url('data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYAA8APwFqr0+rJiQiMAgBYCAJYwDA3BUviYWYW3is1LQAAN/icisrZlrCsp6gdX4NAWynrz2h3x/AmHlsXl1UVidnHLKR4bXHV6+R2kslWr8AAAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/van-05-face-avant-640.avif 640w, photos/opt/van-05-face-avant-744.avif 744w" sizes="(max-width: 899px) 100vw, 62vw">
+          <source type="image/webp" srcset="photos/opt/van-05-face-avant-640.webp 640w, photos/opt/van-05-face-avant-744.webp 744w" sizes="(max-width: 899px) 100vw, 62vw">
+          <img src="photos/opt/van-05-face-avant-744.webp" width="744" height="452" alt="Le Mercedes-Benz Classe V noir de Bordo Drive Tour, vu de trois quarts avant gauche" loading="lazy" decoding="async">
+        </picture></figure>
+          <figure class="showcase__slide" data-label="Devant un château" style="--lq: url('data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBQCdASoYABwAPwFurVCrJiQiqA1RYCAJYgC1IUFXIAtGbRlFzjocSzdXut5cjyXNaAD+FHwQZaWXL8yPAXdmZuzkzSpQHcdv1H686rQWnRf7wj2pNeYRvvvV4KMJ7OSFOuP4vdaLkqZqertpVridi5ZNbQQq66nNWXtDYUJCrcWjQVbG4gAA')"><picture>
+          <source type="image/avif" srcset="photos/opt/van-06-devant-un-chateau-640.avif 640w, photos/opt/van-06-devant-un-chateau-960.avif 960w, photos/opt/van-06-devant-un-chateau-1280.avif 1280w, photos/opt/van-06-devant-un-chateau-1435.avif 1435w" sizes="(max-width: 899px) 100vw, 62vw">
+          <source type="image/webp" srcset="photos/opt/van-06-devant-un-chateau-640.webp 640w, photos/opt/van-06-devant-un-chateau-960.webp 960w, photos/opt/van-06-devant-un-chateau-1280.webp 1280w, photos/opt/van-06-devant-un-chateau-1435.webp 1435w" sizes="(max-width: 899px) 100vw, 62vw">
+          <img src="photos/opt/van-06-devant-un-chateau-1280.webp" width="1435" height="1701" alt="Un van noir Bordo Drive Tour stationné devant un château en pierre blonde, sous un ciel bleu" loading="lazy" decoding="async" style="object-position: 50% 78%">
+        </picture></figure>
+        </div>
+        <div class="showcase__bar">
+          <p class="showcase__caption" id="showcase-caption"><span class="showcase__index" id="showcase-index">01</span><span class="showcase__total" id="showcase-total">/ 06</span><span class="showcase__label" id="showcase-label">Trois quarts avant</span></p>
+          <div class="showcase__controls">
+            <button type="button" id="showcase-prev" aria-label="Photo précédente"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14.5 5L7.5 12l7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+            <button type="button" id="showcase-toggle" aria-label="Mettre le diaporama en pause"><svg class="icon-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><svg class="icon-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 6l9 6-9 6z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></button>
+            <button type="button" id="showcase-next" aria-label="Photo suivante"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9.5 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+          </div>
+          <span class="showcase__progress" aria-hidden="true"><i id="showcase-progress"></i></span>
+        </div>
+      </div>
+      <dl class="specs">
+        <div><dt>Modèle</dt><dd>Mercedes-Benz Classe V</dd></div>
+        <div><dt>Motorisation</dt><dd>V 300 d</dd></div>
+        <div><dt>Carrosserie</dt><dd>Extra-longue</dd></div>
+        <div><dt>Année</dt><dd>2023</dd></div>
+        <div><dt>Finition</dt><dd>Avantgarde</dd></div>
+        <div><dt>Teinte</dt><dd>Noir</dd></div>
+      </dl>
+    </div>
+
+    <dl class="rows vehicle__service">
+      <div><dt>Sept passagers</dt><dd>Familles et groupes jusqu’à sept.</dd></div>
+      <div><dt>Sièges auto</dt><dd>Fournis pour les jeunes enfants.</dd></div>
+      <div><dt>Climatisation</dt><dd>Un van climatisé et tenu propre.</dd></div>
+      <div><dt>Attente sur place</dt><dd>Votre chauffeur patiente pendant vos visites.</dd></div>
+      <div><dt>Conseils en route</dt><dd>Arrêts, châteaux, histoire des lieux.</dd></div>
+    </dl>
+  </section>
+
+  <!-- AVIS -->
+  <section class="reviews" id="avis" aria-labelledby="reviews-title" tabindex="-1">
+    <div class="reviews__inner">
+      <div class="reviews__quote" data-inview="text">
+        <p class="eyebrow" id="reviews-title">Avis Google</p>
+        <blockquote>«&nbsp;Le van est d’un confort haut de gamme et d’une propreté irréprochable.&nbsp;»</blockquote>
+        <cite>Hassan C., excursion de juillet</cite>
+      </div>
+      <div class="reviews__score" data-inview="text">
+        <p class="reviews__figure">5,0<small>sur 5</small></p>
+        <p>11 avis, tous à cinq étoiles.</p>
+        <a class="link-line" href="https://maps.app.goo.gl/Cx12P7pM49RUsCPw9" rel="noopener">Lire les avis sur Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- APERÇU DE LA GALERIE -->
+  <section class="section teaser" aria-labelledby="teaser-title">
+    <div class="teaser__head">
+      <header class="section-head">
+        <p class="eyebrow">La galerie</p>
+        <h2 id="teaser-title">Pierre blonde, <em>vignes</em> et océan</h2>
+      </header>
+      <a class="btn" href="galerie/"><span>Explorer la galerie</span></a>
+    </div>
+    <a class="teaser__strip" href="galerie/" aria-hidden="true" tabindex="-1">
+      <figure class="media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoYAAsAPwFwrk+rJqQiMAgBYCAJaACdACKT2z86199eq2/wAP6u/R4xAxsnDTxhvKqt12X1nNALvLWLfcbgyl76/XmdpG/GyslgXFIAAAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-03-presquile-cap-ferret-640.avif 640w, photos/opt/demo-03-presquile-cap-ferret-960.avif 960w, photos/opt/demo-03-presquile-cap-ferret-1280.avif 1280w, photos/opt/demo-03-presquile-cap-ferret-1920.avif 1920w" sizes="(max-width: 719px) 100vw, 47vw">
+          <source type="image/webp" srcset="photos/opt/demo-03-presquile-cap-ferret-640.webp 640w, photos/opt/demo-03-presquile-cap-ferret-960.webp 960w, photos/opt/demo-03-presquile-cap-ferret-1280.webp 1280w, photos/opt/demo-03-presquile-cap-ferret-1920.webp 1920w" sizes="(max-width: 719px) 100vw, 47vw">
+          <img src="photos/opt/demo-03-presquile-cap-ferret-1280.webp" width="1920" height="846" alt="" loading="lazy" decoding="async">
+        </picture></figure>
+      <figure class="media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAwBgCdASoYACUAPwFurlArJqQiqqwBYCAJZgDKM0xCLgsMheqnO8xIXEbVoxVdJpjrMxBAC+A4tdPgAP7F+QL6DZPXhFwhgvcxow/sPfO7t/lWVXYxHcwN0DHDB5pqEPnKG9qpghYLK1LQ3qnfLVnL6BZQwutOVySZjpBAilG/SeZwCKiTHrZHkCXJ+bYb9mO8+PxJRREDjIa6/vt2ybQAAAA=')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-02-pied-de-vigne-640.avif 640w, photos/opt/demo-02-pied-de-vigne-960.avif 960w, photos/opt/demo-02-pied-de-vigne-1280.avif 1280w" sizes="(max-width: 719px) 50vw, 24vw">
+          <source type="image/webp" srcset="photos/opt/demo-02-pied-de-vigne-640.webp 640w, photos/opt/demo-02-pied-de-vigne-960.webp 960w, photos/opt/demo-02-pied-de-vigne-1280.webp 1280w" sizes="(max-width: 719px) 50vw, 24vw">
+          <img src="photos/opt/demo-02-pied-de-vigne-1280.webp" width="1280" height="1986" alt="" loading="lazy" decoding="async">
+        </picture></figure>
+      <figure class="media" data-inview="media" style="--lq: url('data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQBACdASoYABIAPwFoq06rJaOiMAgBYCAJYwCvhCHYH2SapECOqJ0iGUKsEAAA/lK7wLG8OLdpo7gzlgrMMvvLZ80XjLqQqtk9h+NJ7WCMUS+CKnaAAA==')"><picture>
+          <source type="image/avif" srcset="photos/opt/demo-12-pont-de-pierre-640.avif 640w, photos/opt/demo-12-pont-de-pierre-960.avif 960w, photos/opt/demo-12-pont-de-pierre-1280.avif 1280w, photos/opt/demo-12-pont-de-pierre-1920.avif 1920w" sizes="(max-width: 719px) 50vw, 24vw">
+          <source type="image/webp" srcset="photos/opt/demo-12-pont-de-pierre-640.webp 640w, photos/opt/demo-12-pont-de-pierre-960.webp 960w, photos/opt/demo-12-pont-de-pierre-1280.webp 1280w, photos/opt/demo-12-pont-de-pierre-1920.webp 1920w" sizes="(max-width: 719px) 50vw, 24vw">
+          <img src="photos/opt/demo-12-pont-de-pierre-1280.webp" width="1920" height="1440" alt="" loading="lazy" decoding="async">
+        </picture></figure>
+    </a>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contact-title" tabindex="-1">
+    <p class="eyebrow">Réservation</p>
+    <h2 id="contact-title">Réservez votre trajet <em>avec chauffeur</em></h2>
+    <p class="contact__lead">Composez votre journée en ligne, écrivez ou appelez&nbsp;: tous les jours, 24h/24. Votre chauffeur confirme la veille du départ.</p>
+    <div class="contact__actions">
+      <a class="btn" href="reservation/"><span>Réserver une expérience sur mesure</span></a>
+      <a class="contact__phone" href="tel:+33613155760">06 13 15 57 60</a>
+    </div>
+    <p class="contact__more">
+      <a class="link-line" href="https://wa.me/33613155760" rel="noopener">Écrire sur WhatsApp</a>
+      <a class="link-line link-line--plain" href="mailto:bordodrivetour@gmail.com">bordodrivetour@gmail.com</a>
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer__line"><span>© 2026 Bordo Drive Tour · Votre transport, notre priorité</span><a href="galerie/">La galerie de photos</a><a href="reservation/">Réserver en ligne</a></p>
+  <details class="credits">
+    <summary>Crédits photographiques</summary>
+    <ul>
+      <li>Place de la Bourse, Bordeaux : <a href="https://commons.wikimedia.org/wiki/File:Bordeaux_-_Place_de_la_Bourse_10.jpg" rel="noopener">P. Hughes</a>, <a href="https://creativecommons.org/licenses/by/4.0" rel="noopener license">CC BY 4.0</a></li>
+      <li>Rangs de vigne à l’automne, Saint-Émilion : <a href="https://commons.wikimedia.org/wiki/File:Vignoble_Saint-Emilion.jpg" rel="noopener">Lauchantoiseau</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a></li>
+      <li>Vignes et propriété, Saint-Émilion : <a href="https://commons.wikimedia.org/wiki/File:Vineyards_of_St_Emilion.jpg" rel="noopener">Christophe Eyquem</a>, <a href="https://creativecommons.org/licenses/by/3.0" rel="noopener license">CC BY 3.0</a></li>
+      <li>Saint-Émilion vu du haut du village : <a href="https://commons.wikimedia.org/wiki/File:Saint_%C3%89milion,_Gironde,_France..JPG" rel="noopener">Bpierreb</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="noopener license">CC BY-SA 3.0</a></li>
+      <li>Le clocher de Saint-Émilion au-dessus des vignes : <a href="https://commons.wikimedia.org/wiki/File:Saint_%C3%89milion_Wine_Country.jpg" rel="noopener">Adam Baker</a>, <a href="https://creativecommons.org/licenses/by/2.0" rel="noopener license">CC BY 2.0</a></li>
+      <li>Jetée d’Eyrac, Arcachon : <a href="https://commons.wikimedia.org/wiki/File:Arcachon-Jetee-Eyrac-byRundvald.jpg" rel="noopener">Rundvald</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a></li>
+      <li>Baie de la Concha, Saint-Sébastien : <a href="https://commons.wikimedia.org/wiki/File:San_Sebastian_Bahia_de_La_Concha_06_2012_2495.jpg" rel="noopener">Mariordo (Mario Roberto Durán Ortiz)</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a></li>
+      <li>La presqu’île du Cap Ferret, vue de la dune du Pilat : <a href="https://commons.wikimedia.org/wiki/File:Presquile-CapFerret-de-la-dune-du-Pilat-byRundvald.jpg" rel="noopener">Rundvald</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a></li>
+      <li>Pied de vigne, Saint-Émilion : <a href="https://commons.wikimedia.org/wiki/File:Pied_de_vigne_St_Emilion.jpg" rel="noopener">Cyril5555</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="noopener license">CC BY-SA 3.0</a></li>
+      <li>Pont de Pierre, Bordeaux : <a href="https://commons.wikimedia.org/wiki/File:Bordeaux_-_33000_-_2026.07.04_-_Arche_du_Pont_de_Pierre_%C2%A9_Anthony_Levrot.jpg" rel="noopener">Anthony Levrot</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a></li>
+    </ul>
+  </details>
+</footer>
+
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

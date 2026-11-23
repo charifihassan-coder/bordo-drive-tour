@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réserver : composez votre journée avec Bordo Drive Tour, chauffeur privé à Bordeaux</title>
+<meta name="description" content="Choisissez vos étapes (Saint-Émilion, Médoc, Arcachon, Bordeaux), une date et une heure de départ : le programme de la journée se calcule, puis la demande part chez l'un de nos chauffeurs, qui confirme.">
+<meta name="theme-color" content="#0A0A0C">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bordo Drive Tour">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Réserver une excursion avec Bordo Drive Tour">
+<meta property="og:description" content="Composez votre journée au départ de Bordeaux et envoyez la demande à l'un de nos chauffeurs privés.">
+<meta property="og:image" content="../og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- À compléter avec le domaine définitif : <link rel="canonical" href="https://…/reservation/"> -->
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#planner">Aller au planificateur</a>
+
+<header class="nav nav--long is-solid" id="nav">
+  <a class="nav__brand" href="../" aria-label="Bordo Drive Tour, accueil">Bordo Drive Tour</a>
+  <nav class="nav__links" aria-label="Navigation principale">
+    <a href="../">Accueil</a>
+    <a href="../galerie/">Galerie</a>
+    <a href="#planner" aria-current="page">Réserver</a>
+  </nav>
+  <a class="nav__call" href="tel:+33613155760"><span class="nav__call-label">Appeler</span><span class="nav__call-number">06 13 15 57 60</span></a>
+</header>
+
+<main id="top">
+  <section class="booking-head" aria-labelledby="booking-title">
+    <p class="eyebrow">Réservation en ligne</p>
+    <h1 id="booking-title">Composez <em>votre journée</em></h1>
+    <p class="booking-head__lead">Choisissez vos étapes, une date et une heure de départ&nbsp;: le programme se calcule sous vos yeux. La demande part ensuite chez l’un de nos chauffeurs, qui confirme la veille du départ.</p>
+    <ol class="booking-head__steps">
+      <li><span>01</span>Choisissez vos étapes</li>
+      <li><span>02</span>Fixez la date et l’heure</li>
+      <li><span>03</span>Envoyez votre demande</li>
+    </ol>
+  </section>
+
+  <div class="planner" id="planner" tabindex="-1">
+    <!-- ================= la composition ================= -->
+    <div class="planner__build">
+
+      <section class="p-block" aria-labelledby="p-days-title">
+        <h2 id="p-days-title"><span class="p-block__num">01</span>Vos journées</h2>
+        <p class="p-block__hint">Une excursion, ou plusieurs jours de suite&nbsp;: chaque journée a sa date et son programme.</p>
+        <div class="days" id="days" role="group" aria-label="Journées de la demande"></div>
+        <div class="fields fields--2">
+          <div class="field">
+            <label for="f-date">Date de cette journée</label>
+            <input id="f-date" type="date" required aria-describedby="f-date-err">
+            <p class="field__error" id="f-date-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-time">Heure de départ de Bordeaux</label>
+            <input id="f-time" type="time" step="900" required>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-block" aria-labelledby="p-stops-title">
+        <h2 id="p-stops-title"><span class="p-block__num">02</span>Les étapes</h2>
+        <p class="p-block__hint">Partez d’un programme tout fait, ou choisissez les étapes une à une. L’ordre se règle dans le programme.</p>
+        <div class="presets" id="presets" role="group" aria-label="Programmes tout faits">
+          <button type="button" class="preset" data-preset="0">Saint-Émilion</button>
+          <button type="button" class="preset" data-preset="1">Arcachon</button>
+          <button type="button" class="preset" data-preset="2">Bordeaux en ville</button>
+          <button type="button" class="preset" data-preset="3">Saint-Émilion et Arcachon</button>
+          <button type="button" class="preset" data-preset="4">Les deux rives</button>
+          <button type="button" class="preset" data-preset="5">Transfert vers Saint-Sébastien</button>
+        </div>
+        <ul class="stops" id="stops">
+          <li>
+            <button type="button" class="stop" data-stop="chateau-saint-emilion" aria-pressed="false">
+              <span class="media" style="--lq: url('data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoYABAAPwFurk+rJqQiMAgBYCAJYgC7MoMrZEmQxrs4udDONAD+7VZaBShpWhgCwlRzEoYvfAVMXO/e4wQDsnKU66gnbw8QAAA=')"><picture>
+          <source type="image/avif" srcset="../photos/opt/demo-14-vignes-et-propriete-640.avif 640w, ../photos/opt/demo-14-vignes-et-propriete-960.avif 960w, ../photos/opt/demo-14-vignes-et-propriete-1280.avif 1280w, ../photos/opt/demo-14-vignes-et-propriete-1920.avif 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <source type="image/webp" srcset="../photos/opt/demo-14-vignes-et-propriete-640.webp 640w, ../photos/opt/demo-14-vignes-et-propriete-960.webp 960w, ../photos/opt/demo-14-vignes-et-propriete-1280.webp 1280w, ../photos/opt/demo-14-vignes-et-propriete-1920.webp 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <img src="../photos/opt/demo-14-vignes-et-propriete-1280.webp" width="1920" height="1280" alt="" loading="lazy" decoding="async">
+        </picture></span>
+              <span class="stop__body">
+                <span class="stop__zone">Saint-Émilion</span>
+                <span class="stop__name">Château et dégustation</span>
+                <span class="stop__text">La visite d’un château et sa dégustation. Votre chauffeur vous attend sur place.</span>
+                <span class="stop__meta">Environ 1 h 15 sur place · 50 min de Bordeaux</span>
+              </span>
+              <span class="stop__badge" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="stop" data-stop="village-saint-emilion" aria-pressed="false">
+              <span class="media" style="--lq: url('data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoYABAAPwFwrk+rJqQiMAgBYCAJYwC7ACFqt5OZDT96vQAA/ucgJePDTZtnqjxjUhLt8mMUV+zgHgOiLIec6n+bwfvW54qmd2yQAAAA')"><picture>
+          <source type="image/avif" srcset="../photos/opt/demo-07-toits-de-saint-emilion-640.avif 640w, ../photos/opt/demo-07-toits-de-saint-emilion-960.avif 960w, ../photos/opt/demo-07-toits-de-saint-emilion-1280.avif 1280w, ../photos/opt/demo-07-toits-de-saint-emilion-1920.avif 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <source type="image/webp" srcset="../photos/opt/demo-07-toits-de-saint-emilion-640.webp 640w, ../photos/opt/demo-07-toits-de-saint-emilion-960.webp 960w, ../photos/opt/demo-07-toits-de-saint-emilion-1280.webp 1280w, ../photos/opt/demo-07-toits-de-saint-emilion-1920.webp 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <img src="../photos/opt/demo-07-toits-de-saint-emilion-1280.webp" width="1920" height="1280" alt="" loading="lazy" decoding="async">
+        </picture></span>
+              <span class="stop__body">
+                <span class="stop__zone">Saint-Émilion</span>
+                <span class="stop__name">Village de Saint-Émilion</span>
+                <span class="stop__text">Dépose en haut de la colline, descente à pied jusqu’à la place.</span>
+                <span class="stop__meta">Environ 1 h 05 sur place · 50 min de Bordeaux</span>
+              </span>
+              <span class="stop__badge" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="stop" data-stop="chateaux-medoc" aria-pressed="false">
+              <span class="media" style="--lq: url('data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoYABAAPwFurU6rJqQiMAgBYCAJYgCdACHWrnPImWzqAAD+w4oxq6N2s7oQd3ts2Qf3YQ27BTxHGUI6sksblWnl2S+8AA==')"><picture>
+          <source type="image/avif" srcset="../photos/opt/demo-11-vignoble-saint-estephe-640.avif 640w, ../photos/opt/demo-11-vignoble-saint-estephe-960.avif 960w, ../photos/opt/demo-11-vignoble-saint-estephe-1280.avif 1280w, ../photos/opt/demo-11-vignoble-saint-estephe-1920.avif 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <source type="image/webp" srcset="../photos/opt/demo-11-vignoble-saint-estephe-640.webp 640w, ../photos/opt/demo-11-vignoble-saint-estephe-960.webp 960w, ../photos/opt/demo-11-vignoble-saint-estephe-1280.webp 1280w, ../photos/opt/demo-11-vignoble-saint-estephe-1920.webp 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <img src="../photos/opt/demo-11-vignoble-saint-estephe-1280.webp" width="1920" height="1280" alt="" loading="lazy" decoding="async">
+        </picture></span>
+              <span class="stop__body">
+                <span class="stop__zone">Médoc</span>
+                <span class="stop__name">Châteaux de la rive gauche</span>
+                <span class="stop__text">Votre chauffeur conseille les châteaux à visiter.</span>
+                <span class="stop__meta">Environ 1 h 45 sur place · 55 min de Bordeaux</span>
+              </span>
+              <span class="stop__badge" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="stop" data-stop="arcachon" aria-pressed="false">
+              <span class="media" style="--lq: url('data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAwCdASoYABAAPwForE6rJaQiMAgBYCAJZQCo9CHWyIJKyrNe4AD+5yfBNMH9Fv778eDlponzfnuUdivtlARgJv6YzFD2HL1aAAAA')"><picture>
+          <source type="image/avif" srcset="../photos/opt/demo-05-jetee-arcachon-640.avif 640w, ../photos/opt/demo-05-jetee-arcachon-960.avif 960w, ../photos/opt/demo-05-jetee-arcachon-1280.avif 1280w, ../photos/opt/demo-05-jetee-arcachon-1920.avif 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <source type="image/webp" srcset="../photos/opt/demo-05-jetee-arcachon-640.webp 640w, ../photos/opt/demo-05-jetee-arcachon-960.webp 960w, ../photos/opt/demo-05-jetee-arcachon-1280.webp 1280w, ../photos/opt/demo-05-jetee-arcachon-1920.webp 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <img src="../photos/opt/demo-05-jetee-arcachon-1280.webp" width="1920" height="1280" alt="" loading="lazy" decoding="async">
+        </picture></span>
+              <span class="stop__body">
+                <span class="stop__zone">Bassin d’Arcachon</span>
+                <span class="stop__name">Arcachon</span>
+                <span class="stop__text">La ville et son front de mer.</span>
+                <span class="stop__meta">Environ 2 h sur place · 1 h de Bordeaux</span>
+              </span>
+              <span class="stop__badge" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="stop" data-stop="bordeaux-ville" aria-pressed="false">
+              <span class="media" style="--lq: url('data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAwCdASoYABAALsGAwGAjqysrCwDASxAE6ZQAMv7kPDO2qJVIAP38XOnf5zqYRRmFAvaiLq1VOjxasXagznUihFn/k444AAA=')"><picture>
+          <source type="image/avif" srcset="../photos/opt/demo-01-place-de-la-bourse-640.avif 640w, ../photos/opt/demo-01-place-de-la-bourse-960.avif 960w, ../photos/opt/demo-01-place-de-la-bourse-1280.avif 1280w, ../photos/opt/demo-01-place-de-la-bourse-1920.avif 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <source type="image/webp" srcset="../photos/opt/demo-01-place-de-la-bourse-640.webp 640w, ../photos/opt/demo-01-place-de-la-bourse-960.webp 960w, ../photos/opt/demo-01-place-de-la-bourse-1280.webp 1280w, ../photos/opt/demo-01-place-de-la-bourse-1920.webp 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <img src="../photos/opt/demo-01-place-de-la-bourse-1280.webp" width="1920" height="1275" alt="" loading="lazy" decoding="async">
+        </picture></span>
+              <span class="stop__body">
+                <span class="stop__zone">Bordeaux</span>
+                <span class="stop__name">Bordeaux en ville</span>
+                <span class="stop__text">Les lieux que vous tenez à voir, dans l’ordre qui vous convient.</span>
+                <span class="stop__meta">Environ 3 h sur place</span>
+              </span>
+              <span class="stop__badge" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="stop" data-stop="saint-sebastien" aria-pressed="false">
+              <span class="media" style="--lq: url('data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYABAAPwFqrU6rJiQiMAgBYCAJaACdMoMYADu2ubGVOjLAAPcf4hR+AHoEw6bjxSQlutA8bsI+LEmcpiC09+NJJGkO7g8Q7ww4jsByrrC1SaIAAAA=')"><picture>
+          <source type="image/avif" srcset="../photos/opt/demo-15-baie-de-la-concha-640.avif 640w, ../photos/opt/demo-15-baie-de-la-concha-960.avif 960w, ../photos/opt/demo-15-baie-de-la-concha-1280.avif 1280w, ../photos/opt/demo-15-baie-de-la-concha-1920.avif 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <source type="image/webp" srcset="../photos/opt/demo-15-baie-de-la-concha-640.webp 640w, ../photos/opt/demo-15-baie-de-la-concha-960.webp 960w, ../photos/opt/demo-15-baie-de-la-concha-1280.webp 1280w, ../photos/opt/demo-15-baie-de-la-concha-1920.webp 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <img src="../photos/opt/demo-15-baie-de-la-concha-1280.webp" width="1920" height="1280" alt="" loading="lazy" decoding="async">
+        </picture></span>
+              <span class="stop__body">
+                <span class="stop__zone">Saint-Sébastien</span>
+                <span class="stop__name">Saint-Sébastien</span>
+                <span class="stop__text">Transfert jusqu’en Espagne, avec des arrêts conseillés en route.</span>
+                <span class="stop__meta">Durée sur place à votre choix · 2 h 30 de Bordeaux</span>
+              </span>
+              <span class="stop__badge" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="stop" data-stop="dejeuner" aria-pressed="false">
+              <span class="media" style="--lq: url('data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASoYABAAPwFqrE6rJiQiMAgBYCAJZAC7ACHevWbhtkSxUWiDgADcRVE5Z/Ssr8j/5t5GZna0SJXPzo3jRtX6gdWDLLu48quRweLDZ1gA')"><picture>
+          <source type="image/avif" srcset="../photos/opt/demo-08-grappes-medoc-640.avif 640w, ../photos/opt/demo-08-grappes-medoc-960.avif 960w, ../photos/opt/demo-08-grappes-medoc-1280.avif 1280w, ../photos/opt/demo-08-grappes-medoc-1920.avif 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <source type="image/webp" srcset="../photos/opt/demo-08-grappes-medoc-640.webp 640w, ../photos/opt/demo-08-grappes-medoc-960.webp 960w, ../photos/opt/demo-08-grappes-medoc-1280.webp 1280w, ../photos/opt/demo-08-grappes-medoc-1920.webp 1920w" sizes="(max-width: 719px) 30vw, 170px">
+          <img src="../photos/opt/demo-08-grappes-medoc-1280.webp" width="1920" height="1280" alt="" loading="lazy" decoding="async">
+        </picture></span>
+              <span class="stop__body">
+                <span class="stop__zone">En cours de journée</span>
+                <span class="stop__name">Pause déjeuner</span>
+                <span class="stop__text">Le temps d’un déjeuner, là où vous êtes à ce moment de la journée.</span>
+                <span class="stop__meta">Environ 1 h sur place</span>
+              </span>
+              <span class="stop__badge" aria-hidden="true"></span>
+            </button>
+          </li>
+        </ul>
+        <p class="field__error" id="stops-err" hidden></p>
+        <label class="check"><input id="f-back" type="checkbox" checked><span>Retour à Bordeaux en fin de journée</span></label>
+      </section>
+
+      <section class="p-block" aria-labelledby="p-you-title">
+        <h2 id="p-you-title"><span class="p-block__num">03</span>Vos coordonnées</h2>
+        <p class="p-block__hint">Rien n’est enregistré sur ce site&nbsp;: ces informations restent dans votre navigateur et ne partent qu’avec votre message.</p>
+        <div class="fields fields--2">
+          <div class="field">
+            <label for="f-name">Nom</label>
+            <input id="f-name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="field__error" id="f-name-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Téléphone <span class="field__opt">(facultatif)</span></label>
+            <input id="f-phone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="field">
+            <span class="field__label" id="f-pax-label">Passagers</span>
+            <div class="stepper" role="group" aria-labelledby="f-pax-label">
+              <button type="button" data-step="passengers" data-by="-1" aria-label="Un passager de moins">−</button>
+              <output id="f-pax" aria-live="polite">2</output>
+              <button type="button" data-step="passengers" data-by="1" aria-label="Un passager de plus">+</button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="field__label" id="f-seats-label">Sièges auto enfant</span>
+            <div class="stepper" role="group" aria-labelledby="f-seats-label">
+              <button type="button" data-step="seats" data-by="-1" aria-label="Un siège auto de moins">−</button>
+              <output id="f-seats" aria-live="polite">0</output>
+              <button type="button" data-step="seats" data-by="1" aria-label="Un siège auto de plus">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-pickup">Lieu de prise en charge à Bordeaux <span class="field__opt">(hôtel, adresse)</span></label>
+          <input id="f-pickup" type="text" autocomplete="street-address">
+        </div>
+        <div class="field">
+          <label for="f-note">Un mot pour votre chauffeur <span class="field__opt">(facultatif)</span></label>
+          <textarea id="f-note" rows="3"></textarea>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= le programme ================= -->
+    <aside class="planner__summary" aria-labelledby="p-sum-title" data-native-scroll>
+      <div class="summary">
+        <p class="eyebrow">Votre programme</p>
+        <h2 id="p-sum-title" class="summary__title">Aucune étape pour l’instant</h2>
+        <div id="summary"></div>
+        <p class="summary__note">Durées et temps de route sont des estimations. Le tarif couvre le van et son chauffeur, jusqu’à sept passagers&nbsp;; les visites ne sont pas incluses. Votre chauffeur ajuste le programme et confirme la veille du départ.</p>
+        <div class="send" id="send">
+          <a class="btn" id="send-whatsapp" href="#" target="_blank" rel="noopener"><span>Envoyer par WhatsApp</span></a>
+          <a class="btn" id="send-sms" href="#"><span>Envoyer par SMS</span></a>
+          <a class="btn" id="send-email" href="#" hidden><span>Envoyer par e-mail</span></a>
+        </div>
+        <div class="send__more">
+          <button class="link-line" id="send-copy" type="button">Copier la demande</button>
+          <button class="link-line" id="send-ics" type="button">Ajouter à mon agenda</button>
+          <button class="link-line" id="send-reset" type="button">Tout effacer</button>
+        </div>
+        <p class="summary__status" id="status" role="status" aria-live="polite"></p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer">
+  <p class="footer__line"><span>© 2026 Bordo Drive Tour · Votre transport, notre priorité</span><a href="../">Chauffeur privé à Bordeaux : le service</a></p>
+  <details class="credits">
+    <summary>Crédits photographiques</summary>
+    <ul>
+      <li>Vignes et propriété, Saint-Émilion : <a href="https://commons.wikimedia.org/wiki/File:Vineyards_of_St_Emilion.jpg" rel="noopener">Christophe Eyquem</a>, <a href="https://creativecommons.org/licenses/by/3.0" rel="noopener license">CC BY 3.0</a></li>
+      <li>Saint-Émilion vu du haut du village : <a href="https://commons.wikimedia.org/wiki/File:Saint_%C3%89milion,_Gironde,_France..JPG" rel="noopener">Bpierreb</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="noopener license">CC BY-SA 3.0</a></li>
+      <li>Vignoble de Saint-Estèphe, Médoc : <a href="https://commons.wikimedia.org/wiki/File:Vineyards_of_Ch%C3%A2teau_Cos_D%27Estournel.jpg" rel="noopener">Megan Mallen</a>, <a href="https://creativecommons.org/licenses/by/2.0" rel="noopener license">CC BY 2.0</a></li>
+      <li>Jetée d’Eyrac, Arcachon : <a href="https://commons.wikimedia.org/wiki/File:Arcachon-Jetee-Eyrac-byRundvald.jpg" rel="noopener">Rundvald</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a></li>
+      <li>Place de la Bourse, Bordeaux : <a href="https://commons.wikimedia.org/wiki/File:Bordeaux_-_Place_de_la_Bourse_10.jpg" rel="noopener">P. Hughes</a>, <a href="https://creativecommons.org/licenses/by/4.0" rel="noopener license">CC BY 4.0</a></li>
+      <li>Baie de la Concha, Saint-Sébastien : <a href="https://commons.wikimedia.org/wiki/File:San_Sebastian_Bahia_de_La_Concha_06_2012_2495.jpg" rel="noopener">Mariordo (Mario Roberto Durán Ortiz)</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a></li>
+      <li>Grappes de cabernet sauvignon, Médoc : <a href="https://commons.wikimedia.org/wiki/File:Chateau_Margaux_Cabernet_Sauvignon_vines.jpg" rel="noopener">Megan Mallen</a>, <a href="https://creativecommons.org/licenses/by/2.0" rel="noopener license">CC BY 2.0</a></li>
+    </ul>
+  </details>
+</footer>
+
+<script type="application/json" id="booking-data">{"contact":{"sms":"+33613155760","whatsapp":"33613155760","email":"bordodrivetour@gmail.com"},"depart":"Bordeaux","heureDepart":"09:00","maxPassagers":7,"maxJours":5,"seuils":{"demiJournee":240,"journee":480},"zones":{"bordeaux":"Bordeaux","saint-emilion":"Saint-Émilion","medoc":"Médoc","arcachon":"Bassin d’Arcachon","saint-sebastien":"Saint-Sébastien"},"routes":[["bordeaux","saint-emilion",50],["bordeaux","medoc",55],["bordeaux","arcachon",60],["bordeaux","saint-sebastien",150],["saint-emilion","medoc",80],["saint-emilion","arcachon",95],["saint-emilion","saint-sebastien",185],["medoc","arcachon",85],["medoc","saint-sebastien",200],["arcachon","saint-sebastien",140]],"programmes":[{"nom":"Saint-Émilion","etapes":["chateau-saint-emilion","village-saint-emilion"],"retour":true},{"nom":"Arcachon","etapes":["arcachon"],"retour":true},{"nom":"Bordeaux en ville","etapes":["bordeaux-ville"],"retour":true},{"nom":"Saint-Émilion et Arcachon","etapes":["chateau-saint-emilion","village-saint-emilion","dejeuner","arcachon"],"minutes":{"village-saint-emilion":60,"arcachon":80},"retour":true},{"nom":"Les deux rives","etapes":["chateaux-medoc","dejeuner","chateau-saint-emilion"],"minutes":{"chateau-saint-emilion":90},"retour":true},{"nom":"Transfert vers Saint-Sébastien","etapes":["saint-sebastien"],"retour":false}],"tarifs":{"formules":[{"id":"demi","nom":"Demi-journée","heures":4,"km":80,"prix":280},{"id":"journee","nom":"Journée complète","heures":8,"km":160,"prix":570}],"surMesure":{"nom":"Programme sur mesure","minimumHeures":4},"passagers":7,"notes":["Prix des visites non inclus.","Circuits vers d’autres destinations sur demande."]},"etapes":[{"id":"chateau-saint-emilion","nom":"Château et dégustation","zone":"saint-emilion","minutes":75,"texte":"La visite d’un château et sa dégustation. Votre chauffeur vous attend sur place.","long":"Château et dégustation à Saint-Émilion"},{"id":"village-saint-emilion","nom":"Village de Saint-Émilion","zone":"saint-emilion","minutes":65,"texte":"Dépose en haut de la colline, descente à pied jusqu’à la place."},{"id":"chateaux-medoc","nom":"Châteaux de la rive gauche","zone":"medoc","minutes":105,"texte":"Votre chauffeur conseille les châteaux à visiter.","long":"Châteaux de la rive gauche, Médoc"},{"id":"arcachon","nom":"Arcachon","zone":"arcachon","minutes":120,"texte":"La ville et son front de mer."},{"id":"bordeaux-ville","nom":"Bordeaux en ville","zone":"bordeaux","minutes":180,"texte":"Les lieux que vous tenez à voir, dans l’ordre qui vous convient."},{"id":"saint-sebastien","nom":"Saint-Sébastien","zone":"saint-sebastien","minutes":0,"texte":"Transfert jusqu’en Espagne, avec des arrêts conseillés en route."},{"id":"dejeuner","nom":"Pause déjeuner","zone":null,"minutes":60,"texte":"Le temps d’un déjeuner, là où vous êtes à ce moment de la journée."}]}</script>
+<script type="module" src="../js/booking.js"></script>
+</body>
+</html>
